@@ -16,12 +16,37 @@
             <a style="color:white" href="locations.html">Locations</a>
         </nav>
     </header>
-    <h3>How do I get in touch with you?</h3>
+    <h3>Register for the newsletter</h3>
     <br>
-    <p>
-        If you have an interesting gun you want us to feature or just want to talk guns, send us an email to:
-        <a href="mailto:none@test.com">none@test.com</a>
-    </p>
+    <form action="show_data.html" target="_blank">
+        <label for="firstname">First Name:<input type="text" name="firstname" placeholder="Enter your first name."></label>
+        <br>
+        <label for="lastname">Last Name:<input type="text" name="lastname" placeholder="Enter your last name."></label>
+        <br>
+        <label for="address">Address:<input type="text" name="address" placeholder="Enter your address."></label>
+        <br>
+        <label for="zipcode">ZIP code:<input type="text" name="zipcode" placeholder="Enter your ZIP code."></label>
+        <br>
+        <label for="dob">Date of Birth:<input type="date" name="dob"></label>
+        <br>
+        <p>Gender:
+            <label for="gender">
+            <input type="radio" name="gender" value="Male" checked>Male
+            <input type="radio" name="gender" value="Female">Female
+            </label>
+        </p>
+        <p>Interests:
+            <label for="interests">
+            <input type="checkbox" name="interests" value="guns">Guns
+            <input type="checkbox" name="interests" value="tanks">Tanks
+            <input type="checkbox" name="interests" value="swords">Swords
+            <input type="checkbox" name="interests" value="Warplanes">Warplanes
+            </label>
+        </p>
+        <input type="submit" value="Send">
+        <br>
+        <br>
+    </form>
     <footer style="text-align: center;background-color: darkred; color: white">
         <a style="color:white" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         <a style="color:white" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
