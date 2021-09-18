@@ -1,0 +1,11 @@
+.nota {
+    font-style: italic;
+    font-weight: bold;
+}
+.editorial {
+    background: rgb(255, 0, 0);
+    padding: 10px;
+}
+.editorial::before {
+    content: 'Editor: ';
+}
