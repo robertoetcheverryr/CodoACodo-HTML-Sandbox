@@ -77,13 +77,13 @@ li a:hover, .dropdown:hover .dropbtn {
     margin-bottom: 0.625rem;
 }
 img {
-    /*width: 100%;*/
     display: block;
-    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 .frontImage {
+    height: auto;
+    width: 100%;
     max-width: 1300px;
     filter: grayscale(100%);
 }
