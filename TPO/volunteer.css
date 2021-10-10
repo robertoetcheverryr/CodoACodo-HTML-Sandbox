@@ -25,9 +25,11 @@
 .video-container{
     height: 0;
     overflow: hidden;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
+    padding-bottom: 39%;
+    padding-top: 10px;
     position: relative;
+    margin-right: 15%;
+    margin-left: 15%;
 }
 .video-container iframe, .video-container object, .video-container embed {
     height: 100%;
