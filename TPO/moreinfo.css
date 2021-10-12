@@ -1,0 +1,16 @@
+/*CSS for main image and 3 volunteers*/
+.content {
+    display: block;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+.parent {
+    display: block;
+    max-width: 1300px;
+    margin-top: 0.625rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    align-content: center;
+}

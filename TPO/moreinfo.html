@@ -1,34 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="./common.css">
-<script src="https://kit.fontawesome.com/1538d33d8e.js" crossorigin="anonymous"></script>
-<script src="./navbar.js"></script>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Argentinian volunteers in WW1/2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./common.css">
+    <link rel="stylesheet" type="text/css" href="./moreinfo.css">
 </head>
 <body>
-<nav class="nav-bar" id="my-nav-bar">
-    <a href="index.html" class="nav-item">Home</a>
-    <div class="nav-item dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Histories</a>
-        <div class="dropdown-content">
-            <a href="./maureen.html">Maureen Dunlop</a>
-            <a href="./ronnie.html">Ronnie Scott</a>
-            <a href="./kenneth.html">Kenneth Charney</a>
+    <nav class="nav-bar" id="my-nav-bar">
+        <a href="index.html" class="nav-item">Home</a>
+        <div class="nav-item dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Histories</a>
+            <div class="dropdown-content">
+                <a href="./maureen.html">Maureen Dunlop</a>
+                <a href="./ronnie.html">Ronnie Scott</a>
+                <a href="./kenneth.html">Kenneth Charney</a>
+            </div>
+        </div>
+        <a href="./fallenlist.html" class="nav-item">Fallen Volunteers</a>
+        <a href="./moreinfo.html" class="nav-item nav-no-border">More Info</a>
+        <a href="./about.html" class="nav-item nav-last" id="nav-last-item">About</a>
+        <a href="javascript:void(0);" class="icon hamburger-btn" onclick="toggleHamburger()">
+            <i class="fa fa-bars fa-2x"></i>
+        </a>
+    </nav>
+    <div class="content">
+        <h2 style="text-align: center;">Contact us for more information</h2>
+        <div class="parent">
+            <form class="row g-3" action="../HTML/show_data.html" onsubmit="return validateForm()" method="GET">
+                <div class="col-md-6">
+                    <label for="validationDefault01" class="form-label">First name</label>
+                    <input type="text" class="form-control" name="firstname" id="validationDefault01" placeholder="Werner">
+                </div>
+                <div class="col-md-6">
+                    <label for="validationDefault02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" name="lastname" id="validationDefault02" placeholder="von Braun">
+                </div>
+                <div class="col-md-6">
+                    <label for="validationDefault03" class="form-label">Email</label>
+                    <input type="text" class="form-control" name="email" id="validationDefault03">
+                </div>
+                <div class="col-md-12">
+                    <label for="validationDefault04" class="form-label">Comment</label>
+                    <textarea class="form-control" rows="5" name="comment" id="validationDefault04"></textarea>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
         </div>
     </div>
-    <a href="./fallenlist.html" class="nav-item">Fallen Volunteers</a>
-    <a href="./moreinfo.html" class="nav-item nav-no-border">More Info</a>
-    <a href="./about.html" class="nav-item nav-last" id="nav-last-item">About</a>
-    <a href="javascript:void(0);" class="icon hamburger-btn" onclick="toggleHamburger()">
-        <i class="fa fa-bars fa-2x"></i>
-    </a>
-</nav>
-<div class="content">
-
-</div>
+    <script src="https://kit.fontawesome.com/1538d33d8e.js" crossorigin="anonymous"></script>
+    <script src="./navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function validateForm() {
+            const firstname = document.getElementById('validationDefault01').value;
+            if (firstname.length < 2) {
+                alert('Please enter your first name.');
+                return false;
+            }
+            const lastname = document.getElementById('validationDefault02').value;
+            if (lastname.length < 2) {
+                alert('Please enter your last name.');
+                return false;
+            }
+            const email = document.getElementById('validationDefault03').value;
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            const comment = document.getElementById('validationDefault04').value;
+            if (comment.length === 0) {
+                alert('Please your comment.');
+                return false;
+            }
+            return true;
+        }
+        function validateEmail(email)
+        {
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+    </script>
 </body>
 <footer>
     <div class="foot-bar">
